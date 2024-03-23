@@ -1,4 +1,4 @@
-package org.example.model.user;
+package org.example.models.user;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;

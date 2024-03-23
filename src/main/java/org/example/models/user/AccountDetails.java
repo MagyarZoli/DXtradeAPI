@@ -1,9 +1,9 @@
-package org.example.model.user;
+package org.example.models.user;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
-import org.example.model.AccountCode;
+import org.example.models.AccountCode;
 
 import java.sql.Timestamp;
 

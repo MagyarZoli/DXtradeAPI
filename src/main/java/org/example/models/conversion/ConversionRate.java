@@ -1,4 +1,4 @@
-package org.example.model.conversion;
+package org.example.models.conversion;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
