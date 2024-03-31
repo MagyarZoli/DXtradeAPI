@@ -1,6 +1,7 @@
 package org.example.models.instruments;
 
-public enum SessionEventType {
+public enum SessionEventType
+implements EnumEventType {
 
   SESSION_OPEN,
   SESSION_CLOSE
