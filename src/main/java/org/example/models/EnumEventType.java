@@ -1,4 +1,4 @@
-package org.example.models.instruments;
+package org.example.models;
 
 public interface EnumEventType {
 
