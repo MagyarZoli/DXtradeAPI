@@ -4,9 +4,11 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 import org.example.models.AccountCode;
+import org.example.models.Model;
 
 @Data
-public class InstrumentDetails {
+public class InstrumentDetail
+implements Model {
 
   /**
    * Unique code of an account.
@@ -49,7 +51,7 @@ public class InstrumentDetails {
   private MarginRate marginRate;
 
   @JsonCreator
-  public InstrumentDetails(
+  public InstrumentDetail(
       @JsonProperty(value = "account") AccountCode account,
       @JsonProperty(value = "type") InstrumentType type,
       @JsonProperty(value = "symbol") String symbol,
