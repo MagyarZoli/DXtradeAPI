@@ -3,9 +3,11 @@ package org.example.models.instruments;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
+import org.example.models.Model;
 
 @Data
-public class MarginTier {
+public class MarginTier
+implements Model {
 
   /**
    * End volume of a tier.
