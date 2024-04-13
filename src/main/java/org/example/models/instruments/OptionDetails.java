@@ -3,9 +3,11 @@ package org.example.models.instruments;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
+import org.example.models.Model;
 
 @Data
-public class OptionDetails {
+public class OptionDetails
+implements Model {
 
   private Number strike;
 
