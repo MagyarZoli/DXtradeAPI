@@ -8,7 +8,7 @@ import org.example.models.Model;
 
 @Data
 public class InstrumentDetail
-implements Model {
+implements Model, InstrumentModel {
 
   /**
    * Unique code of an account.
