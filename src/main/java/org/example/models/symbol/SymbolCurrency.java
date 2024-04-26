@@ -1,4 +1,4 @@
-package org.example.models.instruments.symbol;
+package org.example.models.symbol;
 
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
