@@ -3,7 +3,7 @@ package org.example.models.instruments;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
-import org.example.models.AccountCode;
+import org.example.transfer.AccountCode;
 import org.example.models.Model;
 
 @Data
