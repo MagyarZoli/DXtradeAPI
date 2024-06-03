@@ -1,4 +1,4 @@
-package org.example.models.accounts.order;
+package org.example.models.accounts.orders;
 
 public enum PositionEffect {
 
