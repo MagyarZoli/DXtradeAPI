@@ -1,0 +1,41 @@
+package org.example.exception;
+
+public class APIException
+extends RuntimeException {
+
+  public APIException() {
+    super();
+  }
+
+  public APIException(String message) {
+    super(message);
+  }
+
+  public APIException(String errorCode, String description) {
+    super(errorCode + ":" + description);
+  }
+
+  public APIException(String errorCode, String description, String message) {
+    super(errorCode + ":" + description + ", " + message);
+  }
+
+  public APIException(String message, Throwable cause) {
+    super(message, cause);
+  }
+
+  public APIException(String errorCode, String description, String message, Throwable cause) {
+    super(errorCode + ":" + description + ", " + message, cause);
+  }
+
+  public APIException(Throwable cause) {
+    super(cause);
+  }
+
+  public APIException(String errorCode, String description, Throwable cause) {
+    super(errorCode + ":" + description, cause);
+  }
+
+  protected APIException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
+    super(message, cause, enableSuppression, writableStackTrace);
+  }
+}

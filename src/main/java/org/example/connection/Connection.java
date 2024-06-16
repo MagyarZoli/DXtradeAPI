@@ -2,7 +2,7 @@ package org.example.connection;
 
 import lombok.NonNull;
 import org.example.auxiliary.HttpMethod;
-import org.example.controller.SessionToken;
+import org.example.transfer.SessionToken;
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
