@@ -73,9 +73,17 @@ public final class Check {
     }
   }
 
-  public static void putBodyType(@NonNull JSONObject body, @NonNull String bodyName, Integer bodyType) {
+  public static void putBodyType(@NonNull JSONObject body, @NonNull String bodyName, Number bodyType) {
     if (bodyType != null) {
       body.put(bodyName, bodyType);
+    }
+  }
+
+  public static void convRateCheck(@NonNull JSONObject jsonObject) {
+    try {
+      Number convRate = jsonObject.getNumber("convRate");
+    } catch (Exception e) {
+      throw new RuntimeException(e);
     }
   }
 }
