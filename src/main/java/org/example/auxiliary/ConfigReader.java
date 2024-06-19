@@ -4,6 +4,7 @@ import lombok.NonNull;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.lang.reflect.Field;
 import java.util.Properties;
 
 public class ConfigReader {
@@ -31,5 +32,27 @@ public class ConfigReader {
       if (result != null) return result;
     }
     return null;
+  }
+
+  public static void initConfigProperties(Object obj) {
+    Properties properties = loadConfig();
+    if (properties != null) {
+      Class<?> clazz = obj.getClass();
+      for (Field field : clazz.getDeclaredFields()) {
+        if (field.isAnnotationPresent(ConfigProperty.class)) {
+          ConfigProperty annotation = field.getAnnotation(ConfigProperty.class);
+          String key = annotation.value();
+          String value = properties.getProperty(key);
+          if (value != null) {
+            try {
+              field.setAccessible(true);
+              field.set(obj, value);
+            } catch (IllegalAccessException e) {
+              e.printStackTrace();
+            }
+          }
+        }
+      }
+    }
   }
 }
