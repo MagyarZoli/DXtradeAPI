@@ -1,4 +1,4 @@
-package org.example.models.user;
+package org.example.models.users;
 
 public enum AccountStatus {
 
